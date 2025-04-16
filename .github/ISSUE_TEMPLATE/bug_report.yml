@@ -11,7 +11,6 @@ body:
     attributes:
       value: |
         ---
-
   - type: group
     id: environment
     attributes:
@@ -49,7 +48,6 @@ body:
           placeholder: "e.g., Chrome 123, Firefox 124"
         validations:
           required: false # Only required for web version usage
-
   - type: textarea
     id: expected-behavior
     attributes:
@@ -58,7 +56,6 @@ body:
       placeholder: "When I click the 'Save' button, the data should be saved without errors."
     validations:
       required: true
-
   - type: textarea
     id: current-behavior
     attributes:
@@ -67,7 +64,6 @@ body:
       placeholder: "When I click the 'Save' button, the application crashes / nothing happens / an error message appears."
     validations:
       required: true
-
   - type: textarea
     id: steps-to-reproduce
     attributes:
@@ -80,7 +76,6 @@ body:
         4. See error
     validations:
       required: true
-
   - type: dropdown
     id: reliability
     attributes:
@@ -92,7 +87,6 @@ body:
         - "No, it only happened once."
     validations:
       required: true
-
   - type: textarea
     id: console-output
     attributes:
@@ -102,18 +96,19 @@ body:
       render: shell # Use 'shell' or 'log' for better formatting of code/logs
     validations:
       required: false
-
   - type: markdown
-    id: error-log-info
+    id: error-log-info # ID is optional for markdown but kept for consistency
     attributes:
-      label:  Error Log (Desktop Only)
-      description: For the desktop versions, there might also be an error log file if there`s no useful console output. Please check the following locations:
+      # Correctly combines label/description into the value using Markdown formatting
+      value: |
+        ### Error Log File (Desktop only)
+
+        For the desktop versions, there might also be an error log file if there's no useful console output. Please check the following locations:
+
         * **macOS:** `~/Library/Logs/superProductivity/main.log`
         * **Windows:** `%USERPROFILE%\AppData\Roaming\superProductivity\logs\main.log`
         * **Linux:** `~/.config/superProductivity/logs/main.log`
         * **Linux (Snap):** `~/snap/superproductivity/common/.config/superProductivity/logs`
         * **Linux (Flatpak):** `~/.var/app/com.super_productivity.SuperProductivity/config/superProductivity/logs`
 
-        **If you find logs and don`t feel comfortable posting them publicly, you can email them to:** contact@super-productivity.com
-      value: |
-     
+        **If you find logs and don't feel comfortable posting them publicly, you can email them to:** contact@super-productivity.com
