@@ -11,15 +11,8 @@ body: # Ensure indentation uses regular spaces
     id: environment-version
     attributes:
       label: Version Used
-      description: Version number and package type (e.g., snap, deb, installer).
-      placeholder: "e.g., v7.12.0 snap"
-    validations:
-      required: true
-  - type: input
-    id: environment-os
-    attributes:
-      label: Operating System and Version
-      placeholder: "e.g., Ubuntu 22.04 LTS, Windows 11 Pro 22H2, macOS Sonoma 14.1"
+      description: Version number and package type (e.g., exe, snap, deb, installer).
+      placeholder: "e.g. v7.12.0 snap"
     validations:
       required: true
 
@@ -29,7 +22,7 @@ body: # Ensure indentation uses regular spaces
     attributes:
       label: Expected Behavior
       description: Tell us what should happen.
-      placeholder: "When I click the 'Save' button, the data should be saved without errors."
+      placeholder: "e.g. When I click the 'Save' button, the data should be saved without errors."
     validations:
       required: true
   - type: textarea
@@ -37,14 +30,14 @@ body: # Ensure indentation uses regular spaces
     attributes:
       label: Current Behavior
       description: Tell us what happens instead of the expected behavior.
-      placeholder: "When I click the 'Save' button, the application crashes / nothing happens / an error message appears."
+      placeholder: "e.g. When I click the 'Save' button, the application crashes / nothing happens / an error message appears."
     validations:
       required: true
   - type: textarea
     id: steps-to-reproduce
     attributes:
       label: Steps to Reproduce
-      description: Provide a clear set of steps to reproduce this bug. Include code snippets if relevant. Does the error happen reliably?
+      description: Provide a clear set of steps to reproduce this bug.
       placeholder: |
         1. Go to '...'
         2. Click on '....'
@@ -72,7 +65,7 @@ body: # Ensure indentation uses regular spaces
       render: shell # Use 'shell' or 'log' for better formatting of code/logs
     validations:
       required: false
-  - type: markdown
+  - type: textarea
     id: error-log-info # ID is optional for markdown but kept for consistency
     attributes:
       # Correctly combines label/description into the value using Markdown formatting
