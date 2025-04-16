@@ -1,49 +1,56 @@
 # .github/ISSUE_TEMPLATE/bug_report.yml
 name: 🚨 Bug Report
 description: Report a bug you encountered
-title: "[BUG] " # Optional: Prepend [BUG] to the title
+title: "[BUG] "
 labels: [bug]
 assignees:
-  - '' # Add usernames here if you want default assignees
+  - '' # Ensure indentation uses regular spaces
 
-body:
-  - type: group
-    id: environment
+body: # Ensure indentation uses regular spaces
+  # Added introductory markdown block (was missing in the last paste)
+  - type: markdown
     attributes:
-      label: Your Environment
-      description: Include as many relevant details about the environment you experienced the bug in.
-    body:
-      - type: input
-        id: environment-version
-        attributes:
-          label: Version Used
-          description: Version number and package type (e.g., snap, deb, installer).
-          placeholder: "e.g., v7.12.0 snap"
-        validations:
-          required: true
-      - type: input
-        id: environment-os
-        attributes:
-          label: Operating System and Version
-          placeholder: "e.g., Ubuntu 22.04 LTS, Windows 11 Pro 22H2, macOS Sonoma 14.1"
-        validations:
-          required: true
-      - type: input
-        id: environment-de
-        attributes:
-          label: Desktop Environment (Linux only)
-          description: If you are using Linux, please specify your Desktop Environment.
-          placeholder: "e.g., GNOME 42, KDE Plasma 5.27, XFCE 4.18"
-        validations:
-          required: false # Often not applicable or known
-      - type: input
-        id: environment-browser
-        attributes:
-          label: Browser Name and Version (Web version only)
-          description: If you are using the web version, specify your browser.
-          placeholder: "e.g., Chrome 123, Firefox 124"
-        validations:
-          required: false # Only required for web version usage
+      value: |
+        ---
+  # Use markdown for the section heading instead of 'group'
+  - type: markdown
+    attributes:
+      value: |
+        ## Your Environment
+        Include as many relevant details about the environment you experienced the bug in.
+  # Environment fields are now direct children of 'body'
+  - type: input
+    id: environment-version
+    attributes:
+      label: Version Used
+      description: Version number and package type (e.g., snap, deb, installer).
+      placeholder: "e.g., v7.12.0 snap"
+    validations:
+      required: true
+  - type: input
+    id: environment-os
+    attributes:
+      label: Operating System and Version
+      placeholder: "e.g., Ubuntu 22.04 LTS, Windows 11 Pro 22H2, macOS Sonoma 14.1"
+    validations:
+      required: true
+  - type: input
+    id: environment-de
+    attributes:
+      label: Desktop Environment (Linux only)
+      description: If you are using Linux, please specify your Desktop Environment.
+      placeholder: "e.g., GNOME 42, KDE Plasma 5.27, XFCE 4.18"
+    validations:
+      required: false # Often not applicable or known
+  - type: input
+    id: environment-browser
+    attributes:
+      label: Browser Name and Version (Web version only)
+      description: If you are using the web version, specify your browser.
+      placeholder: "e.g., Chrome 123, Firefox 124"
+    validations:
+      required: false # Only required for web version usage
+  # --- Remaining fields ---
   - type: textarea
     id: expected-behavior
     attributes:
