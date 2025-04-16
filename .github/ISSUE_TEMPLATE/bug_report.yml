@@ -69,7 +69,7 @@ body: # Ensure indentation uses regular spaces
     id: error-log-info # ID is optional for markdown but kept for consistency
     attributes:
       # Correctly combines label/description into the value using Markdown formatting
-      value: |
+      label: |
         ### Error Log File (Desktop only)
 
         For the desktop versions, there might also be an error log file if there's no useful console output. Please check the following locations:
