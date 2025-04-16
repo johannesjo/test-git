@@ -7,10 +7,6 @@ assignees:
   - '' # Add usernames here if you want default assignees
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ---
   - type: group
     id: environment
     attributes:
