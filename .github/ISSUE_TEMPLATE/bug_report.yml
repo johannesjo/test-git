@@ -107,14 +107,13 @@ body:
     id: error-log-info
     attributes:
       label:  Error Log (Desktop Only)
-      description:    For the desktop versions, there might also be an error log file if there's no useful console output. Please check the following locations:
-
+      description: For the desktop versions, there might also be an error log file if there`s no useful console output. Please check the following locations:
         * **macOS:** `~/Library/Logs/superProductivity/main.log`
         * **Windows:** `%USERPROFILE%\AppData\Roaming\superProductivity\logs\main.log`
         * **Linux:** `~/.config/superProductivity/logs/main.log`
         * **Linux (Snap):** `~/snap/superproductivity/common/.config/superProductivity/logs`
         * **Linux (Flatpak):** `~/.var/app/com.super_productivity.SuperProductivity/config/superProductivity/logs`
 
-        **If you find logs and don't feel comfortable posting them publicly, you can email them to:** contact@super-productivity.com
+        **If you find logs and don`t feel comfortable posting them publicly, you can email them to:** contact@super-productivity.com
       value: |
      
